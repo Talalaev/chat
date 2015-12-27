@@ -10,7 +10,7 @@ exports.User = [{
 }, {
   _id:         oid('user-iliakan'),
   displayName: "user 2",
-  email:       "iliakan@javascript.ru",
+  email:       "bob@javascript.ru",
   password:    "123456"
 },{
   _id:         oid('user-mike'),

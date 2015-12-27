@@ -13,12 +13,6 @@
 5. Открыть в браузере http://localhost:3000
     
 После выполнения выше указанных действий в приложении появятся 3 пользователя
-1. name: "user 1",
-   email:       "mk@javascript.ru",
-   password:    "123456"
-2. name: "user 2",
-   email:       "iliakan@javascript.ru",
-   password:    "123456"
-3. name: "user 3",
-   email:       "mike@javascript.ru",
-   password:    "123456"
+1. name: "user 1", email: "mk@javascript.ru", password: "123456"
+2. name: "user 2", email: "bob@javascript.ru", password: "123456"
+3. name: "user 3", email: "mike@javascript.ru", password: "123456"
