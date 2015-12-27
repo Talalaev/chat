@@ -1,0 +1,15 @@
+<div class="people-list" id="people-list">
+
+	<span class="allUsers" ng-click="users.setAddressee({})">All Users</span>(currently online)
+	<ul class="list">
+		<li class="clearfix" ng-click="users.setAddressee({
+			name: user.name,
+			id: user.socketId
+		})" ng-repeat="user in users.all">
+			<img alt="avatar" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/195612/chat_avatar_01.jpg">
+			<div class="name" ng-bind="user.name"></div>
+			
+		</li>
+	</ul>
+	
+</div>

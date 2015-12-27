@@ -1,0 +1,39 @@
+<div class="chat">
+	<div class="chat-header clearfix">
+        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/195612/chat_avatar_01_green.jpg" alt="avatar" />
+        
+        <div class="chat-about">
+          <div class="chat-with">Вы вошли как <span ng-bind="chat.mySelfInfo.name"></span></div>
+          <div class="chat-num-messages">id: <span ng-bind="chat.mySelfInfo.socketId"></span></div>
+        </div>
+        <i class="fa fa-star"></i>
+    </div>
+	<div class="chat-history">
+		<div style="color: rgb(146, 149, 158);">
+			Пишем <span ng-bind="chat.addressee.name"></span><span ng-if="!chat.addressee.name">Всем</span>
+		</div>
+		<ul>
+			<li class="clearfix" ng-repeat="mes in chat.messages">
+				<div class="message-data {{mes.align}}">
+					От: <span class="message-data-name" ng-bind="mes.from.name"></span>
+				</div>
+				<div class="message {{mes.whose}}">
+					Сообщение: <span ng-bind="mes.message"></span>
+				</div>
+			</li>
+		</ul>
+	</div>
+	<div class="chat-message clearfix">
+		<div style="color: rgb(146, 149, 158); margin: 0px 0px 10px;">
+			Пишем <span ng-bind="chat.addressee.name"></span><span ng-if="!chat.addressee.name">Всем</span>
+		</div>
+        <textarea ng-model="chat.message" name="message-to-send" id="message-to-send" placeholder ="Ваше сообщение" rows="3"></textarea>
+        
+        <button class="btn btn-success" ng-click="chat.send({
+			addressee: chat.addressee,
+			message: chat.message,
+			from: chat.mySelfInfo
+		})">Отправить</button>
+
+    </div>
+</div>

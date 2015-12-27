@@ -1,0 +1,33 @@
+doctype html
+html(ng-app="appChat")
+
+  head
+    link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.4/css/bootstrap.min.css")
+    link(rel="stylesheet" href="/style.css")
+    
+    script(src="/angular.min.js")
+    script(src="/socket.min.js")
+    script(src="/lodash.min.js")
+    script(src="/angular-ui-router.min.js")
+    script(src="/restangular.min.js")
+    //- @see https://github.com/Automattic/socket.io-client
+    script(src="/socket.io/socket.io.js")
+
+    script(src="/index.js")
+    script(src="/bundle.js")
+      
+      
+
+  body
+    .container
+
+      form(method="POST" action="/logout" onsubmit="socket.disconnect()")
+        button(class="btn btn-warning pull-right") logout
+
+      h1
+        | Chat
+        .label(data-status)
+        
+      users
+      chat
+
